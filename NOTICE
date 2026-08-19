@@ -1,0 +1,15 @@
+Contacts for Deft
+Copyright (c) 2026 Maneek Mohan
+SPDX-License-Identifier: AGPL-3.0-only
+
+Canonical source repository:
+https://github.com/Maneek21/deft-module-contacts
+
+This project is free software licensed under the GNU Affero General Public
+License, version 3 only. The complete license terms are in LICENSE. If you
+modify this module and make it available to users over a network, GNU AGPL v3
+section 13 requires offering those users the corresponding source.
+
+The declarative runtime artifact is deft.module.json. Documentation fixtures
+contain fictional data and are not installed by Deft. This repository does
+not currently incorporate third-party code or assets.

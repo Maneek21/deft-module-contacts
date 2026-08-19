@@ -1,0 +1,140 @@
+{
+  "notice": "Documentation-only fictional fixture. This is not a Deft import format.",
+  "schema_version": "1",
+  "module_id": "com.deft.contacts",
+  "module_version": "1.1.0",
+  "members": [
+    { "fixture_id": "member_avery", "display_name": "Avery Demo" },
+    { "fixture_id": "member_jules", "display_name": "Jules Sample" }
+  ],
+  "collections": {
+    "companies": [
+      {
+        "fixture_id": "company_northstar",
+        "data": {
+          "name": "Northstar Fabrication Test",
+          "website": "https://northstar-fabrication.test",
+          "domain": "northstar-fabrication.test",
+          "industry": "Industrial design",
+          "status": "customer",
+          "owner": "member_avery",
+          "tags": ["manufacturing", "priority"],
+          "notes": "Fictional account used to demonstrate company relationships."
+        }
+      },
+      {
+        "fixture_id": "company_lantern",
+        "data": {
+          "name": "Lantern Fieldworks Test",
+          "website": "https://lantern-fieldworks.test",
+          "domain": "lantern-fieldworks.test",
+          "industry": "Field services",
+          "status": "prospect",
+          "owner": "member_jules",
+          "tags": ["inbound"],
+          "notes": "Fictional prospect for the pipeline example."
+        }
+      }
+    ],
+    "contacts": [
+      {
+        "fixture_id": "contact_rina",
+        "data": {
+          "name": "Rina Example",
+          "company": "Northstar Fabrication Test",
+          "email": "rina@northstar-fabrication.test",
+          "phone": "+1 202-555-0104",
+          "role": "Operations lead",
+          "status": "active",
+          "owner": "member_avery",
+          "tags": ["decision-maker"],
+          "last_contacted_at": "2026-08-14T09:30:00.000Z",
+          "notes": "Entirely fictional contact for product demonstrations."
+        },
+        "relations": { "company_id": ["company_northstar"] }
+      },
+      {
+        "fixture_id": "contact_tomas",
+        "data": {
+          "name": "Tomas Sample",
+          "company": "Lantern Fieldworks Test",
+          "email": "tomas@lantern-fieldworks.test",
+          "phone": "+1 202-555-0117",
+          "role": "Program manager",
+          "status": "lead",
+          "owner": "member_jules",
+          "tags": ["evaluation"],
+          "last_contacted_at": "2026-08-11T15:00:00.000Z",
+          "notes": "Entirely fictional lead for product demonstrations."
+        },
+        "relations": { "company_id": ["company_lantern"] }
+      }
+    ],
+    "deals": [
+      {
+        "fixture_id": "deal_northstar_expansion",
+        "data": {
+          "name": "Northstar workspace expansion",
+          "value": 48000,
+          "stage": "proposal",
+          "close_date": "2026-09-30",
+          "owner": "member_avery",
+          "tags": ["expansion"],
+          "notes": "Fictional opportunity amount; no currency semantics are implied."
+        },
+        "relations": {
+          "company_id": ["company_northstar"],
+          "primary_contact_id": ["contact_rina"]
+        }
+      },
+      {
+        "fixture_id": "deal_lantern_pilot",
+        "data": {
+          "name": "Lantern operations pilot",
+          "value": 12500,
+          "stage": "qualified",
+          "close_date": "2026-10-15",
+          "owner": "member_jules",
+          "tags": ["pilot"],
+          "notes": "Fictional opportunity for the deal pipeline."
+        },
+        "relations": {
+          "company_id": ["company_lantern"],
+          "primary_contact_id": ["contact_tomas"]
+        }
+      }
+    ],
+    "activities": [
+      {
+        "fixture_id": "activity_northstar_review",
+        "data": {
+          "subject": "Proposal review call",
+          "kind": "call",
+          "occurred_at": "2026-08-14T09:30:00.000Z",
+          "owner": "member_avery",
+          "notes": "Reviewed the fictional rollout sequence and next decision date."
+        },
+        "relations": {
+          "contact_id": ["contact_rina"],
+          "company_id": ["company_northstar"],
+          "deal_id": ["deal_northstar_expansion"]
+        }
+      },
+      {
+        "fixture_id": "activity_lantern_followup",
+        "data": {
+          "subject": "Pilot requirements follow-up",
+          "kind": "email",
+          "occurred_at": "2026-08-11T15:00:00.000Z",
+          "owner": "member_jules",
+          "notes": "Sent fictional requirements to tomas@lantern-fieldworks.test."
+        },
+        "relations": {
+          "contact_id": ["contact_tomas"],
+          "company_id": ["company_lantern"],
+          "deal_id": ["deal_lantern_pilot"]
+        }
+      }
+    ]
+  }
+}
