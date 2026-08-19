@@ -51,11 +51,15 @@ jobs:
         with:
           node-version: 22.13.0
 
+      - name: Use pnpm 11
+        uses: pnpm/action-setup@v6.0.10
+        with:
+          version: 11.10.0
+
       - name: Install the pinned validator
         working-directory: deft
         run: |
-          corepack enable
-          corepack pnpm install --frozen-lockfile
+          pnpm install --frozen-lockfile
 
       - name: Validate manifest and expected digest
         working-directory: module
