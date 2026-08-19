@@ -20,7 +20,7 @@ if (-not (Test-Path -LiteralPath (Join-Path $DeftPath 'scripts/modules-cli.ts') 
 $ResolvedDeftPath = (Resolve-Path -LiteralPath $DeftPath).Path
 Push-Location -LiteralPath $ResolvedDeftPath
 try {
-  $Output = (& corepack pnpm module:check $ModuleRoot 2>&1 | Out-String).Trim()
+  $Output = (& pnpm module:check $ModuleRoot 2>&1 | Out-String).Trim()
   if ($LASTEXITCODE -ne 0) {
     throw "Deft module validation failed:`n$Output"
   }

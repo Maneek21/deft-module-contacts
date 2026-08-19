@@ -11,7 +11,7 @@ if [ ! -f "$deft_path/scripts/modules-cli.ts" ]; then
   exit 1
 fi
 
-output=$(cd "$deft_path" && corepack pnpm module:check "$module_root")
+output=$(cd "$deft_path" && pnpm module:check "$module_root")
 printf '%s\n' "$output"
 
 case "$output" in
