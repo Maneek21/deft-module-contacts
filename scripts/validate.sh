@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -eu
 
-expected_digest='sha256:431d879dd511261346c2d38b1c6341f61eb7878ea4690ca836425b3a0c2c266d'
+expected_digest='sha256:495075181043c6cb95ad4080ea894faa6c1b798b3eb2db97571d0b53ff0cbdaf'
 script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 module_root=$(CDPATH= cd -- "$script_dir/.." && pwd)
 deft_path=${1:-"$(dirname -- "$module_root")/Deft"}
@@ -23,4 +23,4 @@ case "$output" in
     ;;
 esac
 
-printf '%s\n' "Contacts 1.1.0 matches $expected_digest"
+printf '%s\n' "Contacts 1.8.0 matches $expected_digest"

@@ -2,9 +2,9 @@
 
 ## One-time repository publication
 
-The initial workflow is pinned to Deft validator commit
-`d9c1530dec444ac7bc863168b472f12e68cfef6f`, the first published core commit containing the finalized 1.1
-module validator. Future pins must remain full 40-character commit SHAs; do not
+The workflow is pinned to Deft validator commit
+`cd487526b7cde82882a6edcbcfbe3659d2a78125`, which contains the contract used by Contacts 1.8.
+Future pins must remain full 40-character commit SHAs; do not
 substitute a branch, tag, `master`, or an older validator.
 
 The workflow remains intentionally configurable through a

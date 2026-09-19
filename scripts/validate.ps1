@@ -5,7 +5,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$ExpectedDigest = 'sha256:431d879dd511261346c2d38b1c6341f61eb7878ea4690ca836425b3a0c2c266d'
+$ExpectedDigest = 'sha256:495075181043c6cb95ad4080ea894faa6c1b798b3eb2db97571d0b53ff0cbdaf'
 $ModuleRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 
 if ([string]::IsNullOrWhiteSpace($DeftPath)) {
@@ -33,4 +33,4 @@ if ($Output -notmatch [regex]::Escape($ExpectedDigest)) {
   throw "Manifest is valid but its digest changed. Expected $ExpectedDigest. Update the version, changelog, README, and validation helpers intentionally."
 }
 
-Write-Output "Contacts 1.1.0 matches $ExpectedDigest"
+Write-Output "Contacts 1.8.0 matches $ExpectedDigest"
