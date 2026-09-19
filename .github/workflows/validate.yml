@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: Resolve validator revision
         env:
-          DEFT_VALIDATOR_REF: ${{ inputs.deft_ref || vars.DEFT_VALIDATOR_REF || 'd9c1530dec444ac7bc863168b472f12e68cfef6f' }}
+          DEFT_VALIDATOR_REF: ${{ inputs.deft_ref || vars.DEFT_VALIDATOR_REF || 'cd487526b7cde82882a6edcbcfbe3659d2a78125' }}
         run: |
           if ! printf '%s' "$DEFT_VALIDATOR_REF" | grep -Eq '^[0-9a-f]{40}$'; then
             echo 'The Deft validator revision must be a full 40-character commit SHA.' >&2
@@ -42,7 +42,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           repository: ${{ vars.DEFT_VALIDATOR_REPOSITORY || 'Maneek21/Deft' }}
-          ref: ${{ inputs.deft_ref || vars.DEFT_VALIDATOR_REF || 'd9c1530dec444ac7bc863168b472f12e68cfef6f' }}
+          ref: ${{ inputs.deft_ref || vars.DEFT_VALIDATOR_REF || 'cd487526b7cde82882a6edcbcfbe3659d2a78125' }}
           path: deft
           persist-credentials: false
 

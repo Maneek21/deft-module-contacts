@@ -3,6 +3,20 @@
 All notable changes to the Contacts module are documented here. Versions follow
 [Semantic Versioning](https://semver.org/).
 
+## 1.8.0 — 2026-09-19
+
+### Added
+
+- Complete declarative CRM workflows for contacts, companies, deals,
+  activities, outreach drafts, and project-linked follow-up tasks.
+- Additional views, filters, relations, validation, and operator-facing
+  metadata used by the integrated Contacts CRM app.
+
+### Compatibility
+
+- The update is additive and preserves the existing Contacts 1.1 collections
+  and fields.
+
 ## 1.1.0 — 2026-08-18
 
 ### Added

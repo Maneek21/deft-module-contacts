@@ -6,10 +6,10 @@ core. The installable product is one declarative file:
 [`deft.module.json`](./deft.module.json). It contains no JavaScript, SQL,
 remote installer, credentials, or executable payload.
 
-Current release: `1.1.0`
+Current release: `1.8.0`
 
 Canonical manifest digest:
-`sha256:431d879dd511261346c2d38b1c6341f61eb7878ea4690ca836425b3a0c2c266d`
+`sha256:495075181043c6cb95ad4080ea894faa6c1b798b3eb2db97571d0b53ff0cbdaf`
 
 ## What it adds
 
@@ -79,7 +79,7 @@ run either:
 
 Pass a different Deft checkout as the first argument when needed. The helpers
 run `corepack pnpm module:check <this-repository>` from that checkout and verify
-the expected `1.1.0` digest. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the
+the expected `1.8.0` digest. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the
 release rules.
 
 ## Fixtures and screenshots
